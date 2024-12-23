@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/style.css" />
     <title>Karere</title>
+    <!-- MailerLite Universal -->
+    <script>
+      (function (w, d, e, u, f, l, n) {
+        (w[f] =
+          w[f] ||
+          function () {
+            (w[f].q = w[f].q || []).push(arguments);
+          }),
+          (l = d.createElement(e)),
+          (l.async = 1),
+          (l.src = u),
+          (n = d.getElementsByTagName(e)[0]),
+          n.parentNode.insertBefore(l, n);
+      })(
+        window,
+        document,
+        "script",
+        "https://assets.mailerlite.com/js/universal.js",
+        "ml"
+      );
+      ml("account", "1234285");
+    </script>
+    <!-- End MailerLite Universal -->
   </head>
   <body>
     <div id="app">
@@ -18,40 +41,14 @@
         linkre, helyezkedj el kényelmesen, és élvezd a pillanatot, amit
         önmagadnak ajándékozol. 🧘‍♀️✨
       </p>
-      <button id="email-dialog-cta">Kérem az ingyenes meditációt</button>
+      <div>
+        <a
+          class="ml-onclick-form"
+          href="javascript:void(0)"
+          onclick="ml('show', 'woVRb5', true)"
+          >Kérem az ingyenes meditációt</a
+        >
+      </div>
     </div>
-    <dialog id="email-dialog">
-      <p>
-        Kérlek, add meg az email címedet, amire elküldhetem neked a meditációt!
-      </p>
-      <form id="email-dialog-form">
-        <div class="control-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            autocomplete="off"
-            required
-          />
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <div class="button-actions">
-            <button type="button" id="cancelButton">Mégse</button>
-            <button type="submit" formmethod="dialog">Küldés</button>
-          </div>
-          <p style="font-size: 12px; color: #666; margin: 0">
-            A küldéssel elfogadod az
-            <a
-              href="https://www.freeprivacypolicy.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Adatvédelmi tájékoztatót</a
-            >.
-          </p>
-        </div>
-      </form>
-    </dialog>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
