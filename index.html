@@ -8,8 +8,49 @@
   </head>
   <body>
     <div id="app">
-      <h1>Hello World</h1>
+      <h1>Karere Meditációs Stúdió</h1>
+      <p style="text-align: left">
+        Az alábbi videó egy különleges meditáció, amely segít elcsendesíteni az
+        elméd, megnyugtatni a lelked, és új energiákkal feltölteni a napodat.
+        Fogadd szeretettel ezt a rövid, vezetett gyakorlatot, amelyet bárhol és
+        bármikor elvégezhetsz, ha egy kis békére vágysz. Kattints az alábbi
+        linkre, helyezkedj el kényelmesen, és élvezd a pillanatot, amit
+        önmagadnak ajándékozol. 🧘‍♀️✨
+      </p>
+      <button id="email-dialog-cta">Kérem az ingyenes meditációt</button>
     </div>
+    <dialog id="email-dialog">
+      <p>
+        Kérlek, add meg az email címedet, amire elküldhetem neked a meditációt!
+      </p>
+      <form id="email-dialog-form">
+        <div class="control-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div class="button-actions">
+            <button type="button" id="cancelButton">Mégse</button>
+            <button type="submit" formmethod="dialog">Küldés</button>
+          </div>
+          <p style="font-size: 12px; color: #666; margin: 0">
+            A küldéssel elfogadod az
+            <a
+              href="https://www.freeprivacypolicy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Adatvédelmi tájékoztatót</a
+            >.
+          </p>
+        </div>
+      </form>
+    </dialog>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
