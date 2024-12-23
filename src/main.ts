@@ -1,6 +1,6 @@
 import { MAILER_LITE_GROUPS } from "./constants";
 import { createUpsertSubscriber } from "./mailer-lite";
-import "./style.css";
+
 const emailDialog = document.querySelector(
   "#email-dialog"
 ) as HTMLDialogElement;
